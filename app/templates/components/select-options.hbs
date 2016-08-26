@@ -1,0 +1,25 @@
+<div class="select-options">
+  <label>Open this select:</label>
+  {{#power-select
+    options=options1
+    selected=selectedOption1
+    searchEnabled=false
+    onchange=(action 'selectOption1')
+    as |option|
+  }}
+    {{option}}
+  {{/power-select}}
+</div>
+
+<div class="select-options">
+  <label>And without closing it, open the second:</label>
+  {{#power-select
+    options=options2
+    selected=selectedOption2
+    searchEnabled=false
+    onchange=(action 'selectOption2')
+    as |option|
+  }}
+    {{option}}
+  {{/power-select}}
+</div>
